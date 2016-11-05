@@ -11,7 +11,7 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle bundle) {
 																	//code starts here
 		super.onCreate(bundle);
-	    //setContentView(R.layout.main_activity);
+	    setContentView(R.layout.main_layout);
 	}
 
 
