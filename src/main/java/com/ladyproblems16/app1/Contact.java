@@ -17,8 +17,9 @@ public class Contact implements IContact {
 	}
 
 	@Override
-	public String getName();
+	public String getName() {
 		return this.name;
+	}
 
 	@Override
 	public void setNumber(String theNumber) {
