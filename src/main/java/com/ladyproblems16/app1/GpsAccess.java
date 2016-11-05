@@ -3,39 +3,32 @@ package com.ladyproblems2016.app1;
 
 
 public class GpsAccess implements IGpsAccess {
-    void init() {
+    public void init() {
         
     }
 
     @Override
-    double getLatitude() {
+    public double getLatitude() {
         return 0;
     }
     
-    double getLongitude() {
+    public double getLongitude() {
         return 0;
     }
     
-    String getStreetAddress() {
+    public String getStreetAddress() {
         return "";
     }
     
-    String getCity() {
+    public String getCity() {
         return "";
     }
     
-    String getState() {
+    public String getState() {
         return "";
     }
 
-    int getZipcode() {
+    public int getZipcode() {
         return 0;
-    }
-
-
-    awd(){
-        IGpsAccess gps = API.getGps();
-        gps.getZipcode();
-        
     }
 }
