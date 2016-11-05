@@ -1,14 +1,14 @@
 package com.ladyproblems2016.app1;
 
-public class Contact implements IContact {
+public class Contact implements IContact { 
 
 	private String name;
 	private String number;
 	private int id;
 	
 	public Contact(String name, String number) {
-		this.name = setName(name);
-		this.number = setNumber(number);
+		setName(name);
+		setNumber(number);
 	}
 	
 	@Override
@@ -31,12 +31,12 @@ public class Contact implements IContact {
 		return this.number;
 	}
 
-	public int setId(int theId) {
+	public void setId(int theId) {
 		this.id = theId;
 	} 
 
 	@Override
-	void setFromSerializable(ISerializable in) {
+	public void setFromSerializable(ISerializable in) {
 
 	}
 }
