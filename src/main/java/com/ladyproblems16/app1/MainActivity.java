@@ -9,6 +9,7 @@ import android.graphics.Point;
 
 public class MainActivity extends Activity {
 	public void onCreate(Bundle bundle) {
+																	//code starts here
 		super.onCreate(bundle);
 	    //setContentView(R.layout.main_activity);
 	}
