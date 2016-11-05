@@ -19,9 +19,9 @@ android {
 		}
         release {
             storeFile file("certs/myreleasekey.keystore")
-            storePassword "amantismymiddlename"
-            keyAlias "SchemeIt"
-            keyPassword "amantismymiddlename"
+            storePassword ""
+            keyAlias ""
+            keyPassword ""
         }
 	}
 
