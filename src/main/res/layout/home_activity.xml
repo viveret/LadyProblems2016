@@ -25,25 +25,32 @@
     <Button
         android:layout_width="75dp"
         android:layout_height="fill_parent"
-        android:text="edit"
+        android:text="EDIT"
         android:background="#00000000"
-        android:textColor="#005999"
-        android:id="@id/edit_user" />
+        android:textColor="#FCBB7E"
+
+        android:id="@+id/button3" />
 
   </LinearLayout>
 
 
   <TextView
       android:id="@id/user_full_name"
+      android:text="Jane Smith"
+
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:layout_marginTop="8dp"
       android:layout_marginLeft="7.5dp"/>
 
   <TextView
       android:id="@id/user_sub_info"
+      android:text="Female, 24 "
+
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:layout_marginTop="4dp"
       android:layout_marginLeft="7.5dp"/>
 
@@ -58,44 +65,54 @@
       android:layout_weight="1"
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:layout_marginLeft="7.5dp"
       android:layout_marginTop="32dp" />
   <Button
       android:layout_width="75dp"
       android:layout_height="fill_parent"
-      android:text="edit"
+      android:text="EDIT"
       android:layout_marginTop="32dp"
       android:background="#00000000"
-      android:textColor="#005999"
-      android:id="@id/edit_contact"/>
+      android:textColor="#FCBB7E"
+
+      android:id="@+id/button4" />
 </LinearLayout>
   <TextView
       android:id="@id/emergency_contact_full_name"
+      android:text="Barbara Jones"
+
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:layout_marginTop="8dp"
       android:layout_marginLeft="7.5dp"/>
 
   <TextView
       android:id="@id/emergency_contact_phone_number"
+      android:text="(206) 123-1234 "
+
       android:layout_width="wrap_content"
       android:layout_height="wrap_content"
+
       android:layout_marginLeft="7.5dp"
       android:layout_marginTop="4dp"/>
 
   <!--ImageView
       android:id="@id/google_map_view"
+
       android:layout_width="fill_parent"
       android:layout_height="250dp"
+
       android:layout_marginTop="8dp"
       /-->
 
   <Button
       android:layout_width="fill_parent"
       android:layout_height="53dp"
-      android:text="911"
-      android:textColor="#000000"
-      android:background="#ff0000"
+      android:text="CALL 911"
+      android:textColor="#ffffff"
+      android:background="#df5c5c"
       android:id="@id/call911_button" />
 
 </LinearLayout>
