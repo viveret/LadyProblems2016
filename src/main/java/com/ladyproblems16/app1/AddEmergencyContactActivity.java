@@ -40,7 +40,8 @@ public class AddEmergencyContactActivity extends Activity {
         if (addFromContactsButton != null) {
             addFromContactsButton.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
-                    // Open add contact from contacts activity
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(i);
                 }
             });
         }
@@ -48,7 +49,7 @@ public class AddEmergencyContactActivity extends Activity {
         if (backButton != null) {
             backButton.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
-                    // Open previous screen
+                    finish();
                 }
             });
 
@@ -57,11 +58,10 @@ public class AddEmergencyContactActivity extends Activity {
         if (nextButton != null) {
             nextButton.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
-                    // Open next screen
+                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+                    startActivity(i);
                 }
             });
-
-
         } 
  	}
 }
