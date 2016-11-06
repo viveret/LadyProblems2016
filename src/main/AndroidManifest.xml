@@ -3,8 +3,9 @@
 	package="com.ladyproblems16.app1">
 
 	<application android:label="app_name" 
-		android:name=".MyApplication"
-		android:allowTaskReparenting="true">
+				 android:name=".MyApplication"
+                 android:icon="@drawable/logo" 
+				 android:allowTaskReparenting="true">
 
 		<activity android:name=".MainActivity"
 			android:label="app_name">
@@ -15,7 +16,10 @@
 			</intent-filter>
 		</activity>
 		
-		<activity android:name=".HomeActivity">
-		</activity>
+		<activity android:name=".HomeActivity"/>
+		<activity android:name=".AddEmergencyContactActivity"/>
+		<activity android:name=".CreateProfileActivity"/>
+		<activity android:name=".ReadScriptActivity"/>
+		<activity android:name=".SettingsActivity"/>
 	</application>
 </manifest>
