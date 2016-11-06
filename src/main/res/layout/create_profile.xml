@@ -90,43 +90,42 @@
 
     </LinearLayout>
 
-    <EditText
+    <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Name"/>
 
     <EditText
-
+        android:id="@id/edit_user_full_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Enter your name"
         android:inputType="text" />
 
-    <EditText
+    <NumberPicker
+        android:id="@id/select_age"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Age"
-        android:id="@+id/editText" />
+        android:text="Age" />
 
-    <EditText
+    <Spinner
+        android:id="@id/select_gender"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Gender"
-        android:id="@+id/editText2" />
+        android:text="Gender" />
 
-    <EditText
+    <Spinner
+        android:id="@id/select_race" 
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Race"
-
-        android:id="@+id/editText3" />
+        android:text="Race" />
 
     <Button
         android:text="Next"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="#005999"
-        android:id="@+id/button2" />
+        android:id="@id/go_next_button" />
 
 
 </LinearLayout>
