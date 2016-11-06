@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="user_full_name" type="id"/>
+    <item name="user_sub_info" type="id"/>
+    
+    <item name="emergency_contact_full_name" type="id"/>
+    <item name="emergency_contact_phone_number" type="id"/>
+
+    <item name="google_map_view" type="id"/>
+</resources>
