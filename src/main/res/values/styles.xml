@@ -2,12 +2,25 @@
 <resources>
 	<!-- inherit from the material theme -->
     <color name="background">#3D475C</color>
-    <color name="orange">#FCBB7E</color>
+    <color name="orangeAccent">#FCBB7E</color>
     <color name="grey">#373131</color>
     <color name="red">#DF5C5C</color>
+    <color name="blueAccent">#4a90e2</color>
+    <color name="blueButton">#86a7ce</color>
+    <color name="white">#ffffff</color>
 
 	<style name="Theme">
 		<item name="android:background">@color/background</item>
+		<item name="android:colorAccent">@color/orangeAccent</item>
+		<item name="android:buttonStyle">@style/Theme.Button</item>
+	</style>
+
+	<style name="Theme.Button" parent="@android:style/Widget.Button">
+		<item name="android:background">@color/blueButton</item>
+		<item name="android:textColor">@color/white</item>
+		<item name="android:textStyle">bold</item>
+		<item name="android:textSize">20sp</item>
+		<item name="android:padding">10dp</item>
 	</style>
 
 	<style name="Theme.Splash" parent="android:Theme">
