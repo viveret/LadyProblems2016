@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="ethnicityRace">
+        <item>Native American/Alaska Native</item>
+        <item>Asian</item>
+        <item>African American</item>
+        <item>Native Hawaiian/Other Pacific Islander</item>
+        <item>Hispanic/Latino</item>
+        <item>White</item>
+    </string-array>
+</resources>
