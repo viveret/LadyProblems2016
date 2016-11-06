@@ -11,6 +11,9 @@ public class MainActivity extends Activity {
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
 	    setContentView(R.layout.splash_activity);
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(i);
+        finish();
 	}
 
 

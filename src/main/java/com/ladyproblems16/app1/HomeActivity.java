@@ -26,13 +26,15 @@ public class HomeActivity extends Activity {
 
         // Load user info from somewhere
         // basically myUserDescription = blah.getUserDesc();
-        if (myUserFullNameTextView != null) {
-            myUserFullNameTextView.setText(myUserDescription.getFirstName() +
-                                           " " + myUserDescription.getLastName());
-        }
-        if (myUserFullNameTextView != null) {
-            myUserSubInfoTextView.setText(myUserDescription.getGenderFull() +
-                                          ", " + myUserDescription.getAge());
+        if (myUserDescription != null) {
+            if (myUserFullNameTextView != null) {
+                myUserFullNameTextView.setText(myUserDescription.getFirstName() +
+                                               " " + myUserDescription.getLastName());
+            }
+            if (myUserFullNameTextView != null) {
+                myUserSubInfoTextView.setText(myUserDescription.getGender() +
+                                              ", " + myUserDescription.getAge());
+            }
         }
 	}
 
