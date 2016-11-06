@@ -15,7 +15,6 @@ public class HomeActivity extends Activity {
     
     private TextView myUserFullNameTextView;
     private TextView myUserSubInfoTextView;
-
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);

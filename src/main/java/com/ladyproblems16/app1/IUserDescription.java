@@ -8,6 +8,8 @@ public interface IUserDescription {
     String getFirstName();
     String getLastName();
 
+    String getFullName();
+
     int getAge();
 
     String getGender();
