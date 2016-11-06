@@ -23,7 +23,7 @@ public class ReadScriptActivity extends Activity {
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
-	    // setContentView(R.layout.read_script_activity);
+	    setContentView(R.layout.call_screen);
 
 		// Get user description
 	    myUserDescription = new UserDescription("Viveret Steele", "White kid", "person", 20);
@@ -33,13 +33,11 @@ public class ReadScriptActivity extends Activity {
 				@Override
 				public void onInit(int status) {
 					if(status == TextToSpeech.SUCCESS) {
-                        final ScriptGenerator sg = new ScriptGenerator(myUserDescription, myGps);
-                        tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_FLUSH, null);
                         myGps.setWhenReady(new GpsAccess.GpsReady() {
                                 @Override
                                 public void onReady(IGpsAccess gps) {
                                     final ScriptGenerator sg = new ScriptGenerator(myUserDescription, gps);
-                                    tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_FLUSH, null);
+                                    tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_ADD, null);
                                 }
                             });
 					} else {

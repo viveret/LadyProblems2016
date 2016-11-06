@@ -13,7 +13,8 @@
     
 	<application android:label="app_name" 
 				 android:name=".MyApplication"
-                 android:icon="@drawable/logo" 
+                 android:icon="@drawable/logo"
+                 android:theme="@style/Theme"
 				 android:allowTaskReparenting="true">
 
 		<activity android:name=".MainActivity"

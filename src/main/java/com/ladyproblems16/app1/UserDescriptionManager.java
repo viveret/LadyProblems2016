@@ -13,6 +13,11 @@ import android.content.Context;
 public class UserDescriptionManager {
     private static final String USER_FILE_LOC = "userDesc.json";
 
+    public static boolean exists(Context c) {
+        File fin = new File(c.getFilesDir(), USER_FILE_LOC);
+        return fin.exists();
+    }
+
     public static IUserDescription loadFromFile(Context c) {
         File fin = new File(c.getFilesDir(), USER_FILE_LOC);
         if (fin.exists()) {

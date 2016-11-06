@@ -4,6 +4,8 @@ import java.util.List;
 
 import java.io.IOException;
 
+import android.widget.Toast;
+
 import android.os.Bundle;
 import android.content.Context;
 import android.location.*;
@@ -48,12 +50,14 @@ public class GpsAccess implements IGpsAccess, LocationListener {
     public void resume() {
         locationManager = (LocationManager) c.getSystemService(Context.LOCATION_SERVICE);
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, this);
+        locationManager.requestLocationUpdates(LocationManager.NETWORK_PROVIDER, 0, 0, this);
     }
 
     @Override
     public void onLocationChanged(final Location location) {
         myLoc = location;
 
+        Toast.makeText(c, "awdawdawdawd ", Toast.LENGTH_SHORT).show();
         if (myLoc != null) {
             if (myCallback != null) {
                 myCallback.onReady(this);
@@ -93,14 +97,26 @@ public class GpsAccess implements IGpsAccess, LocationListener {
     @Override
     public String getStreetAddress() {
         if (geocode != null) {
-            StringBuilder sb = new StringBuilder();
+            /*StringBuilder sb = new StringBuilder();
             if (geocode.getFeatureName() != null)
-                sb.append(geocode.getFeatureName());
+                sb.append(geocode.getFeatureName() + " ");
 
             if (geocode.getThoroughfare() != null)
-                sb.append("");
+                sb.append(geocode.getThoroughfare() + " ");
+
+            if (geocode.getMaxAddressLineIndex() > 0) {
+                if (geocode.getAddressLine(0) != null) {
+                    sb.append(geocode.getAddressLine(0));
+                }
+            }
             
-            return sb.toString();
+            return sb.toString();*/
+            String addressLine = "";
+            for (int i = 0; i < geocode.getMaxAddressLineIndex(); i++) {
+                if (addressLine != "") addressLine += ", ";
+                addressLine += geocode.getAddressLine(i);
+            }
+            return addressLine;
         } else {
             return "";
         }

@@ -1,5 +1,8 @@
 package com.ladyproblems16.app1;
 
+import java.util.List;
+import java.util.ArrayList;
+
 import android.app.Activity;
 import android.os.Bundle;
 import android.content.Intent;
@@ -26,7 +29,7 @@ public class AddEmergencyContactActivity extends Activity {
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
-	    setContentView(R.layout.home_activity);
+	    setContentView(R.layout.add_contacts);
 
         addFromContactsButton = (Button) findViewById(R.id.add_contact_button);
         backButton = (Button) findViewById(R.id.go_back_button);
@@ -35,13 +38,9 @@ public class AddEmergencyContactActivity extends Activity {
         emergencyContactNameEditText = (EditText) findViewById(R.id.edit_contact_name);
         emergencyContactPhoneNumberEditText = (EditText) findViewById(R.id.edit_contact_number);
 
-        // Load user info from somewhere
-        // basically myUserDescription = blah.getUserDesc();
         if (addFromContactsButton != null) {
             addFromContactsButton.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
-                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                    startActivity(i);
                 }
             });
         }
@@ -52,16 +51,20 @@ public class AddEmergencyContactActivity extends Activity {
                     finish();
                 }
             });
-
         }
 
         if (nextButton != null) {
             nextButton.setOnClickListener(new Button.OnClickListener() {
                 public void onClick(View v) {
-                    Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                    startActivity(i);
+                    IContact tmp = new Contact(emergencyContactNameEditText.getText().toString(),
+                                               emergencyContactPhoneNumberEditText.getText().toString());
+
+                    List<IContact> tmpList = new ArrayList<IContact>();
+                    tmpList.add(tmp);
+                    ContactManager.writeToFile(AddEmergencyContactActivity.this, tmpList);
+                    finish();
                 }
             });
-        } 
+        }
  	}
 }

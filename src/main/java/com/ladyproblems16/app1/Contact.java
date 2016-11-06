@@ -5,7 +5,7 @@ public class Contact implements IContact {
 	private String name;
 	private String number;
 	private int id;
-	
+
 	public Contact(String name, String number) {
 		setName(name);
 		setNumber(number);

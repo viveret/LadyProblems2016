@@ -27,7 +27,7 @@ public class CreateProfileActivity extends Activity {
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
-	    setContentView(R.layout.home_activity);
+	    setContentView(R.layout.create_profile);
 
         connectWithFacebook = (Button) findViewById(R.id.connect_with_facebook);
         selectAgeNumberPicker = (NumberPicker) findViewById(R.id.select_age);

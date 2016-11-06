@@ -20,4 +20,7 @@
     <item name="select_gender" type="id"/>
     <item name="select_race" type="id"/>
     <item name="edit_user_full_name" type="id"/>
+    
+    <item name="edit_user" type="id"/>
+    <item name="edit_contact" type="id"/>
 </resources>
