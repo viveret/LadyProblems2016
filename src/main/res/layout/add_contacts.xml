@@ -107,7 +107,7 @@
         android:layout_marginLeft="7.5dp"/>
 
     <EditText
-
+        android:id="@id/edit_contact_name"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Enter a name"
@@ -123,7 +123,7 @@
         android:layout_marginLeft="7.5dp"/>
 
     <EditText
-
+        android:id="@id/edit_contact_number"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="(###) ### - ####"
@@ -134,7 +134,7 @@
         android:layout_marginTop="184dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/button2" />
+        android:id="@id/go_next_button" />
 
 
 </LinearLayout>
