@@ -1,16 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
 	xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
 	android:layout_height="fill_parent" >
+
+  <!--   User profile information   -->
   <TextView
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:gravity="center_vertical"
-      android:text="WELCOME"/>
+      style="@style/Header"
+      android:text="User"/>
+  <TextView
+      android:id="@id/user_full_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"/>
+  <TextView
+      android:id="@id/user_sub_info"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      style="@style/Subscript"/>
+
+  <!--   Emergency contact information   -->
   <TextView
       android:layout_width="fill_parent"
       android:layout_height="wrap_content"
       android:gravity="center_vertical"
-      android:text="Create a profile please!"/>
-</RelativeLayout>
+      style="@style/Header"
+      android:text="Emergency Contact"/>
+  <TextView
+      android:id="@id/emergency_contact_full_name"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"/>
+  <TextView
+      android:id="@id/emergency_contact_phone_number"
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:gravity="center_vertical"
+      style="@style/Subscript"/>
+
+  <LinearLayout
+      android:id="@id/google_map_view"
+      android:layout_width="fill_parent"
+      android:layout_height="145dp"
+      />
+
+  <Button
+      android:layout_width="fill_parent"
+      android:layout_height="wrap_content"
+      android:textColor="#ffffff"
+      android:background="#ffffff"
+      />
+</LinearLayout>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.ladyproblems2016.app1">
+	package="com.ladyproblems16.app1">
 
 	<application android:label="app_name" 
 		android:name=".MyApplication"
@@ -13,6 +13,9 @@
 				<category android:name="android.intent.category.LAUNCHER" />
 				<category android:name="android.intent.category.DEFAULT" />
 			</intent-filter>
+		</activity>
+		
+		<activity android:name=".HomeActivity">
 		</activity>
 	</application>
 </manifest>

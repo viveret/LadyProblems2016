@@ -1,4 +1,4 @@
-package com.ladyproblems2016.app1;
+package com.ladyproblems16.app1;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,9 +9,11 @@ import android.graphics.Point;
 
 public class MainActivity extends Activity {
 	public void onCreate(Bundle bundle) {
-																	//code starts here
 		super.onCreate(bundle);
-	    setContentView(R.layout.main_layout);
+	    setContentView(R.layout.splash_activity);
+        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+        startActivity(i);
+        finish();
 	}
 
 
