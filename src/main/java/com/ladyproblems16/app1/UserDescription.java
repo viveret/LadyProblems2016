@@ -9,8 +9,7 @@ import java.util.concurrent.locks.AbstractOwnableSynchronizer;
 public class UserDescription implements IUserDescription{
 
     //Initialize Variables
-    private String firstName = "";
-    private String lastName = "";
+    private String myFullName = "";
 
     private int age = 0;
 
@@ -19,28 +18,28 @@ public class UserDescription implements IUserDescription{
     private String ethnicityRace = "";
 
 
-    //Getters and Setters
-    @Override
-    public String getFirstName() {
-        return firstName;
-    }
-    @Override
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
+    public UserDescription(ISerializable params) {
+        setFullName(params.getString("name"));
+        setEthnicityRace(params.getString("ethnicityRace"));
+        setAge(params.getInt("age"));
+        setGender(params.getString("gender"));
     }
 
-    @Override
-    public String getLastName() {
-        return lastName;
-    }
-    @Override
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public UserDescription() {
+        setFullName("");
+        setEthnicityRace("");
+        setAge(0);
+        setGender("");
     }
 
     @Override
     public String getFullName() {
-        return firstName + " " + lastName;
+        return myFullName;
+    }
+
+    @Override
+    public void setFullName(String val) {
+        myFullName = val;
     }
     
     @Override

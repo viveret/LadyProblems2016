@@ -5,9 +5,6 @@ package com.ladyproblems16.app1;
  */
 
 public interface IUserDescription {
-    String getFirstName();
-    String getLastName();
-
     String getFullName();
 
     int getAge();
@@ -16,8 +13,7 @@ public interface IUserDescription {
 
     String getEthnicityRace();
 
-    void setFirstName(String lastName);
-    void setLastName(String firstName);
+    void setFullName(String name);
 
     void setAge(int age);
 

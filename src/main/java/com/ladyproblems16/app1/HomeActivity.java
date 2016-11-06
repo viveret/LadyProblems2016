@@ -33,8 +33,7 @@ public class HomeActivity extends Activity {
         // basically myUserDescription = blah.getUserDesc();
         if (myUserDescription != null) {
             if (myUserFullNameTextView != null) {
-                myUserFullNameTextView.setText(myUserDescription.getFirstName() +
-                                               " " + myUserDescription.getLastName());
+                myUserFullNameTextView.setText(myUserDescription.getFullName());
             }
             if (myUserFullNameTextView != null) {
                 myUserSubInfoTextView.setText(myUserDescription.getGender() +

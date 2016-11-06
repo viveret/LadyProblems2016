@@ -42,4 +42,16 @@ public class Serializable implements ISerializable {
             throw new NoSuchElementException();
         }
     }
+    
+    public void setInt(String key, int val) {
+        myValues.put(key, new Integer(val));
+    }
+    
+    public void setString(String key, String val) {
+        myValues.put(key, val);
+    }
+    
+    public void setSerializable(String key, ISerializable val) {
+        myValues.put(key, val);
+    }
 }
