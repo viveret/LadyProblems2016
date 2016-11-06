@@ -11,14 +11,15 @@
     
     <uses-feature android:name="android.hardware.location.gps" />
     
-	<application android:label="app_name" 
+	<application android:label="viveret" 
 				 android:name=".MyApplication"
                  android:icon="@drawable/logo"
                  android:theme="@style/Theme"
 				 android:allowTaskReparenting="true">
 
 		<activity android:name=".MainActivity"
-			android:label="app_name">
+			      android:label="viveret"
+                  android:theme="@style/Theme.Splash">
 			<intent-filter>
 				<action android:name="android.intent.action.MAIN" />
 				<category android:name="android.intent.category.LAUNCHER" />

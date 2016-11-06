@@ -14,12 +14,12 @@ public class UserDescriptionManager {
     private static final String USER_FILE_LOC = "userDesc.json";
 
     public static boolean exists(Context c) {
-        File fin = new File(c.getFilesDir(), USER_FILE_LOC);
-        return fin.exists();
+        return true;//File fin = new File(c.getFilesDir(), USER_FILE_LOC);
+        //return fin.exists();
     }
 
     public static IUserDescription loadFromFile(Context c) {
-        File fin = new File(c.getFilesDir(), USER_FILE_LOC);
+        /*File fin = new File(c.getFilesDir(), USER_FILE_LOC);
         if (fin.exists()) {
             String json = null;
             try {
@@ -50,7 +50,14 @@ public class UserDescriptionManager {
             }
         } else {
             return new UserDescription();
-        }
+            }*/
+        IUserDescription ret = new UserDescription();
+        ret.setAge(20);
+        ret.setGender("Female");
+        ret.setEthnicityRace("Native American");
+        ret.setFullName("Samantha");
+
+        return ret;
     }
     
     public static void writeToFile(Context c, IUserDescription self) {

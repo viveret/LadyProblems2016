@@ -15,6 +15,8 @@ public class ScriptGenerator {
 		sb.append("This is an emergency message from ");
 		sb.append(myUserDescription.getFullName());
 		sb.append(". I am a ");
+		sb.append(myUserDescription.getEthnicityRace());
+        sb.append(", ");
 		sb.append(myUserDescription.getAge());
 		sb.append(" year old ");
 		sb.append(myUserDescription.getGender());
@@ -23,8 +25,9 @@ public class ScriptGenerator {
         sb.append(", ");
         sb.append(myLocation.getCity());
         sb.append(", GPS coordinates ");
-        sb.append(myLocation.getLatitude() + " north, ");
-        sb.append(myLocation.getLongitude() + " west, ");
+        sb.append(myLocation.getLatitude() + " north, and ");
+        sb.append(myLocation.getLongitude() + " west. ");
+        sb.append("I am in danger and need help.");
 
         return sb.toString();
     }

@@ -13,6 +13,8 @@ import android.view.Display;
 import android.graphics.Point;
 import android.widget.Toast;
 
+import android.os.Handler;
+
 public class MainActivity extends Activity {
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -32,7 +34,6 @@ public class MainActivity extends Activity {
 		} else {
 			continueToHomeScreen();
 		}
-		//		continueToHomeScreen();
 	}
 
 	@Override
@@ -42,9 +43,16 @@ public class MainActivity extends Activity {
 	}
 
 	private void continueToHomeScreen() {
-        Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-        startActivity(i);
-        finish();
+		Handler handler = new Handler();
+		handler.postDelayed(new Runnable() {
+				@Override
+				public void run() {
+					Intent i = new Intent(getApplicationContext(), HomeActivity.class);
+					startActivity(i);
+					finish();
+				}
+
+			}, 5000); // 5000ms delay
 	}
 
 

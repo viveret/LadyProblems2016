@@ -12,6 +12,7 @@ import android.widget.Button;
 
 import android.widget.TextView;
 import android.view.View;
+import android.widget.Toast;
 
 public class HomeActivity extends Activity {
 
@@ -84,6 +85,7 @@ public class HomeActivity extends Activity {
     private void reloadUserDesc() {
         // Load user info from somewhere
         myUserDescription = UserDescriptionManager.loadFromFile(this);
+        Toast.makeText(this, "null", Toast.LENGTH_SHORT);
         if (myUserDescription != null) {
             if (myUserFullNameTextView != null) {
                 myUserFullNameTextView.setText(myUserDescription.getFullName());
@@ -92,6 +94,10 @@ public class HomeActivity extends Activity {
                 myUserSubInfoTextView.setText(myUserDescription.getGender() +
                                               ", " + myUserDescription.getAge());
             }
+            
+            Toast.makeText(this, myUserDescription.getFullName(), Toast.LENGTH_SHORT);
+        } else {
+            Toast.makeText(this, "Failed to retrieve user desc", Toast.LENGTH_SHORT);
         }
     }
 

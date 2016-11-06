@@ -26,7 +26,7 @@ public class ReadScriptActivity extends Activity {
 	    setContentView(R.layout.call_screen);
 
 		// Get user description
-	    myUserDescription = new UserDescription("Viveret Steele", "White kid", "person", 20);
+	    myUserDescription = UserDescriptionManager.loadFromFile(this);
         final GpsAccess myGps = new GpsAccess(this);
         
 		tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {

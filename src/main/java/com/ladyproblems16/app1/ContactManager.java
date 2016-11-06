@@ -18,7 +18,10 @@ public class ContactManager {
 
     public static List<IContact> loadFromFile(Context c) {
         List<IContact> ret = new ArrayList<IContact>();
-        File fin = new File(c.getFilesDir(), CONTACTS_FILE_LOC);
+        IContact tmp = new Contact("Barbara Jones", "(206) 123-1234");
+        ret.add(tmp);
+        return ret;
+        /*File fin = new File(c.getFilesDir(), CONTACTS_FILE_LOC);
 
         if (fin.exists()) {
             String json = null;
@@ -52,7 +55,7 @@ public class ContactManager {
             return ret;
         } else {
             return ret;
-        }
+            }*/
     }
     
     public static void writeToFile(Context c, List<IContact> self) {
