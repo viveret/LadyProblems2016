@@ -6,8 +6,10 @@ import android.content.Intent;
 
 import android.view.Display;
 import android.graphics.Point;
+import android.widget.Button;
 
 import android.widget.TextView;
+import android.view.View;
 
 public class HomeActivity extends Activity {
 
@@ -15,6 +17,8 @@ public class HomeActivity extends Activity {
     
     private TextView myUserFullNameTextView;
     private TextView myUserSubInfoTextView;
+
+    private Button call911;
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -22,6 +26,8 @@ public class HomeActivity extends Activity {
 
         myUserFullNameTextView = (TextView) findViewById(R.id.user_full_name);
         myUserSubInfoTextView = (TextView) findViewById(R.id.user_sub_info);
+
+        call911 = (Button) findViewById(R.id.call911_button);
 
         // Load user info from somewhere
         // basically myUserDescription = blah.getUserDesc();
@@ -34,6 +40,15 @@ public class HomeActivity extends Activity {
                 myUserSubInfoTextView.setText(myUserDescription.getGender() +
                                               ", " + myUserDescription.getAge());
             }
+        }
+
+        if (call911 != null) {
+            call911.setOnClickListener(new Button.OnClickListener() {
+                public void onClick(View v) {
+                    Intent i = new Intent(getApplicationContext(), ReadScriptActivity.class);
+                    startActivity(i);
+                }
+            });
         }
 	}
 
