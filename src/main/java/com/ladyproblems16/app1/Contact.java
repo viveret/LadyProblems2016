@@ -10,6 +10,12 @@ public class Contact implements IContact {
 		setName(name);
 		setNumber(number);
 	}
+
+	public Contact(ISerializable params) {
+		setName(params.getString("name"));
+		setNumber(params.getString("number"));
+		setId(params.getInt("id"));
+	}
 	
 	@Override
 	public void setName(String theName) {
@@ -31,12 +37,13 @@ public class Contact implements IContact {
 		return this.number;
 	}
 
+	@Override
 	public void setId(int theId) {
 		this.id = theId;
-	} 
-
+	}
+	
 	@Override
-	public void setFromSerializable(ISerializable in) {
-
+	public int getId() {
+		return id;
 	}
 }
