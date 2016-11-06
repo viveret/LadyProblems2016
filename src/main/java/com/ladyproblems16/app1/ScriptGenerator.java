@@ -3,9 +3,11 @@ package com.ladyproblems16.app1;
 
 public class ScriptGenerator {
     private IUserDescription myUserDescription;
+    private IGpsAccess myLocation;
 
-    public ScriptGenerator(IUserDescription theUserDesc) {
+    public ScriptGenerator(IUserDescription theUserDesc, IGpsAccess location) {
         myUserDescription = theUserDesc;
+        myLocation = location;
     }
 
     public String generateDefault() {
@@ -17,6 +19,12 @@ public class ScriptGenerator {
 		sb.append(" year old ");
 		sb.append(myUserDescription.getGender());
 		sb.append(" located at ");
+        sb.append(myLocation.getStreetAddress());
+        sb.append(", ");
+        sb.append(myLocation.getCity());
+        sb.append(", GPS coordinates ");
+        sb.append(myLocation.getLatitude() + " north, ");
+        sb.append(myLocation.getLongitude() + " west, ");
 
         return sb.toString();
     }

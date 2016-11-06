@@ -26,15 +26,24 @@ public class ReadScriptActivity extends Activity {
 	    // setContentView(R.layout.read_script_activity);
 
 		// Get user description
-		// myUserDescription =
-		final ScriptGenerator sg = new ScriptGenerator(myUserDescription);
+	    myUserDescription = new UserDescription("Viveret Steele", "White kid", "person", 20);
+        final GpsAccess myGps = new GpsAccess(this);
+        
 		tts = new TextToSpeech(this, new TextToSpeech.OnInitListener() {
 				@Override
 				public void onInit(int status) {
-					if(status != TextToSpeech.ERROR) {
-						Toast.makeText(getApplicationContext(), "Error initializing text to speech engine", Toast.LENGTH_SHORT).show();
+					if(status == TextToSpeech.SUCCESS) {
+                        final ScriptGenerator sg = new ScriptGenerator(myUserDescription, myGps);
+                        tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_FLUSH, null);
+                        myGps.setWhenReady(new GpsAccess.GpsReady() {
+                                @Override
+                                public void onReady(IGpsAccess gps) {
+                                    final ScriptGenerator sg = new ScriptGenerator(myUserDescription, gps);
+                                    tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_FLUSH, null);
+                                }
+                            });
 					} else {
-						tts.speak(sg.generateDefault(), TextToSpeech.QUEUE_FLUSH, null);
+						Toast.makeText(getApplicationContext(), "Error initializing text to speech engine", Toast.LENGTH_SHORT).show();
 					}
 				}
 			});

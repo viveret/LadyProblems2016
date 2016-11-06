@@ -31,6 +31,13 @@ public class UserDescription implements IUserDescription{
         setAge(0);
         setGender("");
     }
+    
+    public UserDescription(String theName, String theEthnicityRace, String theGender, int theAge) {
+        setFullName(theName);
+        setEthnicityRace(theEthnicityRace);
+        setAge(theAge);
+        setGender(theGender);
+    }
 
     @Override
     public String getFullName() {

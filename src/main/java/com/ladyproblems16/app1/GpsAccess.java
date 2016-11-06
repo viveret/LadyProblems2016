@@ -14,13 +14,28 @@ public class GpsAccess implements IGpsAccess, LocationListener {
     private Location myLoc;
 
     private Geocoder myGeocoder;
-    
     private Address geocode;
 
-    public GpsAccess(Context theC) {
+    private GpsReady myCallback;
+
+    public GpsAccess(Context theC, GpsReady gps) {
         c = theC;
+        myCallback = gps;
         myGeocoder = new Geocoder(c);
         resume();
+    }
+    
+    public GpsAccess(Context theC) {
+        this(theC, null);
+    }
+
+    @Override
+    public void setWhenReady(GpsReady gps) {
+        if (myLoc != null) {
+            gps.onReady(this);
+        } else {
+            myCallback = gps;
+        }
     }
 
     @Override
@@ -39,26 +54,40 @@ public class GpsAccess implements IGpsAccess, LocationListener {
     public void onLocationChanged(final Location location) {
         myLoc = location;
 
-        try {
-            List<Address> tmpGeocodes = myGeocoder.getFromLocation(getLatitude(), getLongitude(), 1);
-            if (tmpGeocodes.size() > 0) {
-                geocode = tmpGeocodes.get(0);
-            } else {
-                geocode = null;
+        if (myLoc != null) {
+            if (myCallback != null) {
+                myCallback.onReady(this);
+                myCallback = null;
             }
-        } catch (IOException e) {
-            e.printStackTrace();
+            try {
+                List<Address> tmpGeocodes = myGeocoder.getFromLocation(getLatitude(), getLongitude(), 1);
+                if (tmpGeocodes.size() > 0) {
+                    geocode = tmpGeocodes.get(0);
+                } else {
+                    geocode = null;
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
     }
 
     @Override
     public double getLatitude() {
-        return myLoc.getLatitude();
+        if (myLoc != null) {
+            return myLoc.getLatitude();
+        } else {
+            return 0;
+        }
     }
     
     @Override
     public double getLongitude() {
-        return myLoc.getLongitude();
+        if (myLoc != null) {
+            return myLoc.getLongitude();
+        } else {
+            return 0;
+        }
     }
     
     @Override

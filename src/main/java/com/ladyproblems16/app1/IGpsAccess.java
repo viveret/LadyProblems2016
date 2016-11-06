@@ -14,4 +14,10 @@ public interface IGpsAccess {
     void resume();
 
     boolean isAvailable();
+
+    void setWhenReady(GpsReady gps);
+
+    public static interface GpsReady {
+        void onReady(IGpsAccess gps);
+    }
 }
