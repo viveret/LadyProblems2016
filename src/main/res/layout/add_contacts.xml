@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    android:orientation="vertical"
+
+    <TextView
+        android:text="Add Emergency Contact"
+        style="@style/Header"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="7.5dp"/>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="horizontal" android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:textColor="#000000"
+            android:layout_weight=""
+            android:layout_marginTop="8dp"/>
+
+            <LinearLayout
+
+                android:orientation="vertical" android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <TextView
+                    android:text="Access Your Contacts"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="2dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:id="@+id/textView" />
+
+                <TextView
+                    android:text="Choose a contact from your phone to add them to your emergency contacts."
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="7.5dp"
+                    android:id="@+id/textView2" />
+
+            </LinearLayout>
+
+        <ImageView
+            android:src="@drawable/ic_icn_arrow"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_gravity="center"
+            android:layout_weight=""/>
+    </LinearLayout>
+
+    <TextView
+        android:text="-------------------------Or ---------------------------"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="7.5dp"/>
+
+</LinearLayout>
