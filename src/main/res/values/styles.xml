@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<!-- inherit from the material theme -->
-	<style name="AppTheme">
+    <color name="background">#3D475C</color>
+    <color name="orange">#FCBB7E</color>
+    <color name="grey">#373131</color>
+    <color name="red">#DF5C5C</color>
+
+	<style name="Theme">
+		<item name="android:background">@color/background</item>
 	</style>
 
 	<style name="Theme.Splash" parent="android:Theme">
@@ -21,4 +27,6 @@
     <style name="Subscript" parent="@android:style/TextAppearance.Medium">
         <item name="android:textSize">30sp</item>
     </style>
+
+
 </resources>
