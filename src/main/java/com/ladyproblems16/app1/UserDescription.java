@@ -39,6 +39,11 @@ public class UserDescription implements IUserDescription{
     }
 
     @Override
+    public String getFullName() {
+        return firstName + " " + lastName;
+    }
+    
+    @Override
     public int getAge() {
         return age;
     }
