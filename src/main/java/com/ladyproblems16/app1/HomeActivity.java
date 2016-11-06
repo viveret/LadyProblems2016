@@ -19,6 +19,8 @@ public class HomeActivity extends Activity {
     private TextView myUserSubInfoTextView;
 
     private Button call911;
+
+    private GpsAccess myGps;
     
 	public void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
@@ -49,16 +51,20 @@ public class HomeActivity extends Activity {
                 }
             });
         }
+
+        myGps = new GpsAccess(this);
 	}
 
 
 	@Override
 	protected void onResume() {
 	  super.onResume();
+      myGps.resume();
 	}
 
 	@Override
 	protected void onPause() {
 	  super.onPause();
+      myGps.pause();
 	}
 }

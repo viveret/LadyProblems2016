@@ -1,8 +1,6 @@
-package com.ladyproblems2016.app1;
+package com.ladyproblems16.app1;
 
 public interface IGpsAccess {
-    void init();
-
     double getLatitude();
     double getLongitude();
 
@@ -10,5 +8,10 @@ public interface IGpsAccess {
     String getCity();
     String getState();
 
-    int getZipcode();
+    String getZipcode();
+
+    void pause();
+    void resume();
+
+    boolean isAvailable();
 }
