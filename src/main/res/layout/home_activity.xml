@@ -92,19 +92,20 @@
       android:layout_marginLeft="7.5dp"
       android:layout_marginTop="4dp"/>
 
-  <!--ImageView
+  <ImageView
       android:id="@id/google_map_view"
 
       android:layout_width="fill_parent"
       android:layout_height="250dp"
 
-      android:layout_marginTop="8dp"
-      /-->
+android:layout_marginTop="8dp"
+android:src="@drawable/placeholder_map"
+      />
 
   <Button
       android:layout_width="fill_parent"
       android:layout_height="53dp"
-      android:layout_marginTop="200dp"
+      android:layout_marginTop="20dp"
       android:text="CALL 911"
       android:textColor="#ffffff"
       android:background="#df5c5c"
