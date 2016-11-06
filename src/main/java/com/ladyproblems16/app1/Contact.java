@@ -1,4 +1,4 @@
-package com.ladyproblems2016.app1;
+package com.ladyproblems16.app1;
 
 public class Contact implements IContact { 
 
