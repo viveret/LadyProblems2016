@@ -4,7 +4,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:text="Add Emergency Contact"
+        android:text="Create Your Profile"
         style="@style/Header"
 
         android:layout_width="wrap_content"
@@ -20,36 +20,37 @@
         <ImageView
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_contacts"
+            android:src="@drawable/ic_icn_facebook"
             android:textColor="#000000"
+            android:layout_marginLeft="7.5dp"
             android:layout_marginTop="8dp"/>
 
-            <LinearLayout
+        <LinearLayout
 
-                android:orientation="vertical" android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
+            android:orientation="vertical" android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
 
-                <TextView
-                    android:text="Access Your Contacts"
+            <TextView
+                android:text="Connect wih Facebook"
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
 
-                    android:layout_marginTop="2dp"
-                    android:layout_marginLeft="7.5dp"
-                    android:id="@+id/textView" />
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="7.5dp"
+                android:id="@+id/textView" />
 
-                <TextView
-                    android:text="Choose a contact from your phone to add them to your emergency contacts."
+            <TextView
+                android:text="Use information from your facebook profile to create your profile."
 
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginLeft="7.5dp"
-                    android:id="@+id/textView2" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="7.5dp"
+                android:id="@+id/textView2" />
 
-            </LinearLayout>
+        </LinearLayout>
 
         <ImageView
             android:src="@drawable/ic_icn_arrow"
@@ -89,51 +90,42 @@
 
     </LinearLayout>
 
-    <TextView
-        android:text="Emergency Contact's Information"
-
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="7.5dp"/>
-    <TextView
-        android:text="Name"
-
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="7.5dp"/>
+        android:text="Name"/>
 
     <EditText
 
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter a name"
+        android:hint="Enter your name"
         android:inputType="text" />
 
-    <TextView
-        android:text="Phone Number"
-
-        android:layout_width="wrap_content"
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:layout_marginTop="8dp"
-        android:layout_marginLeft="7.5dp"/>
+        android:text="Age"
+        android:id="@+id/editText" />
 
     <EditText
-
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="(###) ### - ####"
-        android:inputType="phone" />
+        android:text="Gender"
+        android:id="@+id/editText2" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Race"
+
+        android:id="@+id/editText3" />
 
     <Button
         android:text="Next"
-        android:layout_marginTop="184dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="#005999"
         android:id="@+id/button2" />
 
 
